@@ -54,4 +54,9 @@ Initial directory: $(TargetDir)
 Use Output window: checked
 ```
 
+   > Note that, in Windows you can find / verify the COM port by Device Manager:
+   >
+   > ![Set external tool](images/win_get_com_port.png)
+   >
+
 7. Connect a slotcar to USB cabel and in menu **Tools** select **Send to Arduino SlotCar** to flash the firmware.
