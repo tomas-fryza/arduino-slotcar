@@ -1,4 +1,4 @@
-## HOW TO use template in Microchip Studio
+# HOW TO use template in Microchip Studio
 
 1. Start Microchip Studio and create a new `GCC C++ Exacutable Project`.
 
@@ -12,23 +12,23 @@
 
    ![Microchip Studio add items](images/new_project_add_items.png)
 
-4. Build project in menu **Build > Build Solution F7**. 
+4. Build project in menu **Build > Build Solution F7**.
 
 5. If not already done, add the following lines to your `avrdude.conf` file:
 
-```bash
-#------------------------------------------------------------
-# ATmega328PB
-#------------------------------------------------------------
+   ```bash
+   #------------------------------------------------------------
+   # ATmega328PB
+   #------------------------------------------------------------
 
-part parent "m328"
-    id                  = "m328pb";
-    desc                = "ATmega328PB";
-    signature           = 0x1e 0x95 0x16;
+   part parent "m328"
+       id                  = "m328pb";
+       desc                = "ATmega328PB";
+       signature           = 0x1e 0x95 0x16;
 
-    ocdrev              = 1;
+       ocdrev              = 1;
         
-    memory "efuse"
+       memory "efuse"
                 size = 1;
                 min_write_delay = 4500;
                 max_write_delay = 4500;
@@ -37,10 +37,10 @@ part parent "m328"
 
                 write = "1 0 1 0 1 1 0 0 1 0 1 0 0 1 0 0",
                                 "x x x x x x x x x x x x i i i i";
-    ;
+       ;
         
-;
-```
+   ;
+   ```
 
 6. If not already done, in menu **Tools** create a new **External Tools...** as follows (use your path to `avrdude.exe` and specify your COM port):
 
