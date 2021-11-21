@@ -1,6 +1,6 @@
 # Arduino controlled autonomous slotcar
 
-![demo](/images/foto-pcb-top.png)
+![demo](foto-pcb-top.png)
 
 ## Installations
 
