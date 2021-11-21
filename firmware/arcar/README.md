@@ -14,7 +14,7 @@
 
 4. Build project in menu **Build > Build Solution F7**. 
 
-5. To use avrdude programer, add the following lines to your `avrdude.conf` file:
+5. If not already done, add the following lines to your `avrdude.conf` file:
 
 ```bash
 #------------------------------------------------------------
@@ -42,7 +42,7 @@ part parent "m328"
 ;
 ```
 
-6. If not yet, then in menu **Tools** create a new **External Tools...** as follows:
+6. If not already done, in menu **Tools** create a new **External Tools...** as follows:
 
 ```
 Title: Send to Arduino SlotCar
