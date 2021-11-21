@@ -1,5 +1,5 @@
 # AVR project Makefile
-# wykys 2018
+# wykys, Tomas Fryza 2018-Present
 
 
 ######################################
