@@ -10,7 +10,9 @@
 
 ## Usage
 
-[Microchip Studio](firmware/arcar)
+[Linux-based systems](firmware/README_linux.md)
+
+[Microchip Studio](firmware/README.md)
 
 ## TODO: Bluetooth GATT
 
