@@ -46,13 +46,12 @@ part parent "m328"
 
    ![Set external tool](../../install/images/microchip_studio_config_avrdude.png)
 
-```bash
-Title: Send to Arduino SlotCar
-Command: C:\APPZ\Avr\avrdude.exe
-Arguments: -p m328p -c arduino -D -V -u -q -U flash:w:$(TargetName).hex:i -P COM4
-Initial directory: $(TargetDir)
-Use Output window: checked
-```
+   | :-- | :-- |
+   | Title: | Send to Arduino SlotCar
+   | Command: | C:\APPZ\Avr\avrdude.exe
+   | Arguments: | -p m328p -c arduino -D -V -u -q -U flash:w:$(TargetName).hex:i -P COM4
+   | Initial directory: | $(TargetDir)
+   | Use Output window: | checked
 
    > Note that, in Windows you can find / verify the COM port by Device Manager:
    >
