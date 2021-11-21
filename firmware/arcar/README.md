@@ -42,18 +42,16 @@ part parent "m328"
 ;
 ```
 
-6. If not already done, in menu **Tools** create a new **External Tools...** as follows:
+6. If not already done, in menu **Tools** create a new **External Tools...** as follows (use **your** path to avrdude and specify COM port):
 
-```
+   ![Set external tool](../../install/images/microchip_studio_config_avrdude.png)
+
+```bash
 Title: Send to Arduino SlotCar
 Command: C:\APPZ\Avr\avrdude.exe
 Arguments: -p m328p -c arduino -D -V -u -q -U flash:w:$(TargetName).hex:i -P COM4
 Initial directory: $(TargetDir)
 Use Output window: checked
 ```
-
-   Note: In the settings, use **your** path to avrdude (here `C:\APPZ\Avr\`) and specify **your** COM port (here, `COM4`). 
-
-   ![Set external tool](../../install/images/microchip_studio_config_avrdude.png)
 
 7. Connect a slotcar to USB cabel and in menu **Tools** select **Send to Arduino SlotCar** to flash the firmware.
