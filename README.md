@@ -2,6 +2,8 @@
 
 ![demo](foto-pcb-top.png)
 
+[KiCad project](docs/hw)
+
 ## Installations
 
 [Linux-based systems](install/README.md)
