@@ -2,7 +2,7 @@
 
 ![demo](/images/foto-pcb-top.png)
 
-## Instalations
+## Installations
 
 [Linux-based systems](install/README.md)
 
@@ -10,7 +10,7 @@
 
 [Microchip Studio](fiemware/arcar)
 
-## Bluetooth GATT
+## TODO: Bluetooth GATT
 
 ```shell
 # UUID service:  
