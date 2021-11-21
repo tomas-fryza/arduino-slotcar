@@ -14,25 +14,25 @@ cp Atmel.ATmega_DFP.1.7.374.atpak Atmel.ATmega_DFP.1.7.374.zip
 sudo unzip Atmel.ATmega_DFP.1.7.374.zip -d /opt/Atmel.ATmega_DFP.1.7.374
 ```
 
-4. Download AVR toolchain and extract it to `/opt/ folder`
+4. Download AVR toolchain and extract it to `/opt/` folder
 
 5. Clone repo
 
 ```
-git clone https://github.com/wykys/vut-arcar
+git clone https://github.com/tomas-fryza/arduino-slotcar
 ```
 
-6. Change path to `vut-arcar/config` and run avrdude script
+6. Change path to `arduino-slotcar/install` and run avrdude script
 
 ```
-cd vut-arcar/config
+cd arduino-slotcar/install
 sh ./copy-avrduderc-to-home.sh
 ```
 
-7. Change path to `vut-arcar/fw/arcar`
+7. Change path to `arduino-slotcar/firmware/arcar`
 
 ```
-cd ../fw/arcar
+cd ../firmware/arcar
 ```
 
 8. Change/verify Toolchain and DFP paths in Makefile
@@ -61,7 +61,7 @@ make miniterm
 make clean
 ```
 
-12. Program your algorithm in `vut-arcar/fw/arcar/src/main.cpp` file, compile and flash the firmware to AVR
+12. Program your algorithm in `arduino-slotcar/firmware/arcar/src/main.cpp` file, compile and flash the firmware to AVR
 
 ### Notes
 
@@ -95,5 +95,5 @@ Measured values are sent to UART terminal in 8N1 mode and 38400 Bd. You can view
 printf("deg/s: %3.0f %3.0f %3.0f  |  ", imu.calcGyro(imu.gx), imu.calcGyro(imu.gy), imu.calcGyro(imu.gz));
 printf("a [g]: %2.1f %2.1f %2.1f  |  ", imu.calcAccel(imu.ax), imu.calcAccel(imu.ay), imu.calcAccel(imu.az));
 printf("B [uT]: %4.0f %4.0f %4.0f  |  ", imu.calcMag(imu.mx) * 100, imu.calcMag(imu.my) * 100, imu.calcMag(imu.mz) * 100);
-printf("T [C]: %2.1f\n", 25.0 + ((double) imu.temperature) / 16.0);
+printf("T [C]: %2.1f\r\n", 25.0 + ((double) imu.temperature) / 16.0);
 ```
