@@ -62,10 +62,11 @@ int main(void)
         imu.readMag();
         imu.readGyro();
         imu.readAccel();
-
+        
+        // Just for testing. Use "make miniterm" command or PuTTY in 8N1 mode, 38400 Bd
         printf("deg/s: %3.0f %3.0f %3.0f  |  ", imu.calcGyro(imu.gx), imu.calcGyro(imu.gy), imu.calcGyro(imu.gz));
         printf("a [g]: %2.1f %2.1f %2.1f  |  ", imu.calcAccel(imu.ax), imu.calcAccel(imu.ay), imu.calcAccel(imu.az));
         printf("B [uT]: %4.0f %4.0f %4.0f  |  ", imu.calcMag(imu.mx) * 100, imu.calcMag(imu.my) * 100, imu.calcMag(imu.mz) * 100);
-        printf("T [C]: %2.1f\n", 25.0 + ((double) imu.temperature) / 16.0);
+        printf("T [C]: %2.1f\r\n", 25.0 + ((double) imu.temperature) / 16.0);
     }
 } // main
