@@ -1,10 +1,18 @@
-# VUT UREL Autonomous Racing Car
+# Arduino controlled autonomous slotcar
 
-Main board photo.
-![demo](/img/foto-pcb-top.png)
+![demo](/images/foto-pcb-top.png)
+
+## Instalations
+
+[Linux-based systems](install/README.md)
+
+## Usage
+
+[Microchip Studio](fiemware/arcar)
 
 ## Bluetooth GATT
-```
+
+```shell
 # UUID service:  
 49535343-FE7D-4AE5-8FA9-9FAFD205E455  
 # UUID write charasteristic

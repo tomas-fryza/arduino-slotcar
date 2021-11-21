@@ -1,6 +1,0 @@
-Send to Arduino SlotCar
-C:\APPZ\Avr\avrdude.exe
--p m328pb -c arduino -b 57600 -U flash:w:$(TargetName).hex:i -P COM4
-$(TargetDir)
-
-x Use Output window

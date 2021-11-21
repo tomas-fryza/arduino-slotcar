@@ -1,69 +1,69 @@
 # HOWTO use slotcar template in Ubuntu-based Linux
 
-1. Download Atmel ATmega Series Device Support (1.7.374) from http://packs.download.atmel.com/
+1. Download Atmel ATmega Series Device Support (1.7.374) from [Microchip Packs Repository](http://packs.download.atmel.com/)
 
 2. Rename Atmel Pack File (atpak) to ZIP:
 
-```
-cp Atmel.ATmega_DFP.1.7.374.atpak Atmel.ATmega_DFP.1.7.374.zip
-```
+   ```shell
+   cp Atmel.ATmega_DFP.1.7.374.atpak Atmel.ATmega_DFP.1.7.374.zip
+   ```
 
 3. Extract zip file to `/opt/` folder
 
-```
-sudo unzip Atmel.ATmega_DFP.1.7.374.zip -d /opt/Atmel.ATmega_DFP.1.7.374
-```
+   ```shell
+   sudo unzip Atmel.ATmega_DFP.1.7.374.zip -d /opt/Atmel.ATmega_DFP.1.7.374
+   ```
 
 4. Download AVR toolchain and extract it to `/opt/` folder
 
 5. Clone repo
 
-```
-git clone https://github.com/tomas-fryza/arduino-slotcar
-```
+   ```shell
+   git clone https://github.com/tomas-fryza/arduino-slotcar
+   ```
 
 6. Change path to `arduino-slotcar/install` and run avrdude script
 
-```
-cd arduino-slotcar/install
-sh ./copy-avrduderc-to-home.sh
-```
+   ```shell
+   cd arduino-slotcar/install
+   sh ./copy-avrduderc-to-home.sh
+   ```
 
 7. Change path to `arduino-slotcar/firmware/arcar`
 
-```
-cd ../firmware/arcar
-```
+   ```shell
+   cd ../firmware/arcar
+   ```
 
 8. Change/verify Toolchain and DFP paths in Makefile
 
-```
-TOOLCHAIN_PATH = /opt/avr8-gnu-toolchain-linux_x86_64
-DFP = /opt/Atmel.ATmega_DFP.1.7.374
-```
+   ```shell
+   TOOLCHAIN_PATH = /opt/avr8-gnu-toolchain-linux_x86_64
+   DFP = /opt/Atmel.ATmega_DFP.1.7.374
+   ```
 
 9. Compile template
 
-```
-make all
-```
+   ```shell
+   make all
+   ```
 
-10. Connect slot car to USB, compile and download firmware to AVR
+   Connect slot car to USB, compile and download firmware to AVR
 
-```
-make build_and_flash
-```
+   ```shell
+   make build_and_flash
+   ```
 
-Other useful commands:
+   Other useful commands:
 
-```
-make miniterm
-make clean
-```
+   ```shell
+   make miniterm
+   make clean
+   ```
 
-12. Program your algorithm in `arduino-slotcar/firmware/arcar/src/main.cpp` file, compile and flash the firmware to AVR
+10. Program your algorithm in `arduino-slotcar/firmware/arcar/src/main.cpp` file, compile and flash the firmware to AVR
 
-### Notes
+## Notes to `main.cpp` code
 
 Default speed is set to 75%
 
