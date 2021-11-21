@@ -42,7 +42,7 @@ part parent "m328"
 ;
 ```
 
-6. If not already done, in menu **Tools** create a new **External Tools...** as follows (use **your** path to avrdude and specify COM port):
+6. If not already done, in menu **Tools** create a new **External Tools...** as follows (use your path to `avrdude.exe` and specify your COM port):
 
    ![Set external tool](../../install/images/microchip_studio_config_avrdude.png)
 
