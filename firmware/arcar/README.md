@@ -1,6 +1,6 @@
 ## HOW TO use template in Microchip Studio
 
-1. Run Microchip Studio and create a new `GCC C++ Exacutable Project`.
+1. Start Microchip Studio and create a new `GCC C++ Exacutable Project`.
 
    ![Microchip Studio new project](images/new_project_type.png)
 
@@ -60,6 +60,6 @@ part parent "m328"
 
 7. Connect a slotcar to USB cabel and in menu **Tools** select **Send to Arduino SlotCar** to flash the firmware.
 
-8. Run PuTTY, open serial communication with a slot car (8N1 mode, 38400 Bd) and receive sensor values.
+8. Start PuTTY, open serial communication with the slot car (mode 8N1, 38400 Bd) and receive sensor values.
 
    ![Configure PuTTY](../../install/images/putty_config_serial.png)
