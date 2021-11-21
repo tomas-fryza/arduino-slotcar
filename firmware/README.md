@@ -62,4 +62,4 @@
 
 8. Start PuTTY, open serial communication with the slot car (mode 8N1, 38400 Bd) and receive sensor values.
 
-   ![Configure PuTTY](../../install/images/putty_config_serial.png)
+   ![Configure PuTTY](../install/images/putty_config_serial.png)
