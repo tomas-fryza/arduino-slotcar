@@ -29,10 +29,10 @@
    sh ./copy-avrduderc-to-home.sh
    ```
 
-7. Change path to `arduino-slotcar/firmware/arcar`
+7. Change path to `arduino-slotcar/firmware`
 
    ```shell
-   cd ../firmware/arcar
+   cd ../firmware
    ```
 
 8. Change/verify Toolchain and DFP paths in Makefile
@@ -57,8 +57,9 @@
    Other useful commands:
 
    ```shell
-   make miniterm
    make clean
+   make size
+   make list
    ```
 
 10. Program your algorithm in `arduino-slotcar/firmware/arcar/src/main.cpp` file, compile and flash the firmware to AVR
