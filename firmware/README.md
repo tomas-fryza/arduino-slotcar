@@ -48,7 +48,7 @@
    | :-- | :-- |
    | Title: | `Send to Arduino SlotCar`
    | Command: | `C:\APPZ\Avr\avrdude.exe`
-   | Arguments: | `-p m328p -c arduino -D -V -u -q -U flash:w:$(TargetName).hex:i -P COM4`
+   | Arguments: | `-p m328pb -c arduino -b 57600 -U flash:w:$(TargetName).hex:i -P COM4`
    | Initial directory: | `$(TargetDir)`
    | Use Output window: | checked
 

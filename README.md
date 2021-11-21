@@ -8,7 +8,7 @@
 
 ## Usage
 
-[Microchip Studio](fiemware/arcar)
+[Microchip Studio](firmware/arcar)
 
 ## TODO: Bluetooth GATT
 
