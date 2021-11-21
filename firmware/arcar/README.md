@@ -46,6 +46,7 @@ part parent "m328"
 
    ![Set external tool](../../install/images/microchip_studio_config_avrdude.png)
 
+   | Parameter | Value |
    | :-- | :-- |
    | Title: | Send to Arduino SlotCar
    | Command: | C:\APPZ\Avr\avrdude.exe
