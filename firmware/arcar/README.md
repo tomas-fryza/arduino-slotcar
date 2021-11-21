@@ -51,6 +51,6 @@ Arguments: -p m328p -c arduino -D -V -u -q -U flash:w:$(TargetName).hex:i -P COM
 Initial directory: $(TargetDir)
 Use Output window: checked
 ```
-   ![Set external tool](../../../install/images/microchip_studio_config_avrdude.png)
+   ![Set external tool](../../install/images/microchip_studio_config_avrdude.png)
 
 7. Connect a slotcar to USB cabel and in menu **Tools** select **Send to Arduino SlotCar** to flash the firmware.
