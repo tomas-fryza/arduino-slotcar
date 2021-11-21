@@ -22,4 +22,5 @@
 ```
 
 configuration [Serial-Bluetooth](https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal&hl=cs)  
-![demo](/img/serial-bluetooth.png)
+
+![demo](serial-bluetooth.png)
