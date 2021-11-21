@@ -8,7 +8,7 @@
 
    ![Microchip Studio device](images/new_project_device.png)
 
-3. To new created project folder, copy all source and header files from this repository. In **Solution Explorer** click on the project name, then in menu **Project**, select **Add Existing Item... Shift+Alt+A** and add all source and header files.
+3. To the newly created project folder, copy all source and header files from this repository. In **Solution Explorer** click on the project name, then in menu **Project**, select **Add Existing Item... Shift+Alt+A** and add all source and header files.
 
    ![Microchip Studio add items](images/new_project_add_items.png)
 
