@@ -52,6 +52,8 @@ Initial directory: $(TargetDir)
 Use Output window: checked
 ```
 
+   Note: In the settings, use **your** path to avrdude (here `C:\APPZ\Avr\`) and specify **your** COM port (here, `COM4`). 
+
    ![Set external tool](../../install/images/microchip_studio_config_avrdude.png)
 
 7. Connect a slotcar to USB cabel and in menu **Tools** select **Send to Arduino SlotCar** to flash the firmware.
