@@ -53,4 +53,4 @@ Use Output window: checked
 ```
    ![Set external tool](../install/images/microchip_studio_config_avrdude.png)
 
-7. Connect a slotcar to USB cabel and in menu **Tools** select **Send to Arduino SlotCar** to download the firmware to its Flash.
+7. Connect a slotcar to USB cabel and in menu **Tools** select **Send to Arduino SlotCar** to flash the firmware.
