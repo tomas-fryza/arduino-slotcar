@@ -2,15 +2,15 @@
 
 1. Run Microchip Studio and create a new `GCC C++ Exacutable Project`.
 
-![Microchip Studio new project](images/new_project_type.png)
+   ![Microchip Studio new project](images/new_project_type.png)
 
 2. Select `ATmega328PB` device.
 
-![Microchip Studio device](images/new_project_device.png)
+   ![Microchip Studio device](images/new_project_device.png)
 
 3. To new created project folder, copy all source and header files from this repository. In **Solution Explorer** click on the project name, then in menu **Project**, select **Add Existing Item... Shift+Alt+A** and add all source and header files.
 
-![Microchip Studio add items](images/new_project_add_items.png)
+   ![Microchip Studio add items](images/new_project_add_items.png)
 
 4. Build project in menu **Build > Build Solution F7**. 
 
@@ -51,7 +51,6 @@ Arguments: -p m328p -c arduino -D -V -u -q -U flash:w:$(TargetName).hex:i -P COM
 Initial directory: $(TargetDir)
 Use Output window: checked
 ```
-![Set external tool](../install/images/microchip_studio_config_avrdude.png)
+   ![Set external tool](../install/images/microchip_studio_config_avrdude.png)
 
 7. Connect a slotcar to USB cabel and in menu **Tools** select **Send to Arduino SlotCar** to download the firmware to its Flash.
-
