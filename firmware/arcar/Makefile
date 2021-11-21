@@ -71,7 +71,7 @@ AVRDUDE = avrdude -p $(shell $(WTR)) -c $(PROGRAMMER)
 # Atmel Device Family Packs (DFP) for new devices support.
 # http://packs.download.atmel.com/
 #######################################
-DFP = /opt/Atmel.ATmega_DFP.1.2.272
+DFP = /opt/Atmel.ATmega_DFP.1.7.374
 DEVSPEC = -B $(DFP)/gcc/dev/$(CHIP)
 AVRLIB = -I$(DFP)/include
 
@@ -143,7 +143,7 @@ terminal:
 dump_eeprom:
 	@echo "dump eeprom" | $(AVRDUDE) -t
 flash:
-	@$(AVRDUDE) -U flash:w:$(BUILD_DIR)/$(TARGET).elf:e
+	$(AVRDUDE) -U flash:w:$(BUILD_DIR)/$(TARGET).elf:e
 flash_all:
 	@$(AVRDUDE) -U flash:w:$(BUILD_DIR)/$(TARGET).elf:e -U eeprom:w:$(BUILD_DIR)/$(TARGET).elf:e
 chip_test:
