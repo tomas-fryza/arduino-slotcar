@@ -4,7 +4,7 @@
 
 2. Download and install [git version control](https://git-scm.com/).
 
-3. Download latest [avrdude](http://savannah.nongnu.org/projects/avrdude) programmer and extract archive `avrdude-6.3-mingw32.zip` to `C:\APPZ\Avr\`
+3. Download latest [avrdude](http://savannah.nongnu.org/projects/avrdude) programmer and extract archive `avrdude-6.3-mingw32.zip` to `C:\APPZ\Avr\`.
 
 4. Add the following lines to your `avrdude.conf` file:
 
