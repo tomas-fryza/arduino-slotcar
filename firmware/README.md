@@ -1,4 +1,4 @@
-# HOWTO use slotcar template in Microchip Studio
+# HOWTO use slot car template in Microchip Studio
 
 1. Start Microchip Studio and create a new `GCC C++ Exacutable Project`.
 
@@ -14,7 +14,7 @@
 
 4. Build project in menu **Build > Build Solution F7**.
 
-5. Connect a slotcar to USB cabel and in menu **Tools** select **Send to Arduino SlotCar** to flash the firmware.
+5. Connect a slot car to USB cabel and in menu **Tools** select **Send to Arduino SlotCar** to flash the firmware.
 
 6. Start PuTTY, open serial communication with the slot car (mode 8N1, 38400 Bd) and receive sensor values.
 
