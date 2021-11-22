@@ -81,10 +81,10 @@ int main(void)
             led.reverse_left (true);
             led.reverse_right(true);
         } else if (speed > 60) {
-            led.forward_left (false);
-            led.forward_right(false);
-            led.reverse_left (true);
-            led.reverse_right(true);
+            led.forward_left (true);
+            led.forward_right(true);
+            led.reverse_left (false);
+            led.reverse_right(false);
         } else if (speed > 40) {
             led.forward_left (false);
             led.forward_right(false);
@@ -92,7 +92,8 @@ int main(void)
             led.reverse_right(false);
         }
         motor.forward(speed);
-        _delay_ms(250);*/
+        _delay_ms(250);
+*/
     }
 
     // Will never reach this
