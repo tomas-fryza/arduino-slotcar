@@ -8,7 +8,9 @@
 
 ## Installation
 
-[Linux-based systems](install/README.md)
+[Linux-based systems](install/README_linux.md)
+
+[Windows](install/README.md)
 
 ## Usage
 
