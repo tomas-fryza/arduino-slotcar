@@ -14,52 +14,8 @@
 
 4. Build project in menu **Build > Build Solution F7**.
 
-5. If not already done, add the following lines to your `avrdude.conf` file:
+5. Connect a slotcar to USB cabel and in menu **Tools** select **Send to Arduino SlotCar** to flash the firmware.
 
-   ```bash
-   #------------------------------------------------------------
-   # ATmega328PB
-   #------------------------------------------------------------
-
-   part parent "m328"
-       id                  = "m328pb";
-       desc                = "ATmega328PB";
-       signature           = 0x1e 0x95 0x16;
-
-       ocdrev              = 1;
-        
-       memory "efuse"
-                size = 1;
-                min_write_delay = 4500;
-                max_write_delay = 4500;
-                read = "0 1 0 1 0 0 0 0 0 0 0 0 1 0 0 0",
-                           "x x x x x x x x o o o o o o o o";
-
-                write = "1 0 1 0 1 1 0 0 1 0 1 0 0 1 0 0",
-                                "x x x x x x x x x x x x i i i i";
-       ;
-        
-   ;
-   ```
-
-6. If not already done, in menu **Tools** create a new **External Tools...** as follows (use your path to `avrdude.exe` and specify your COM port):
-
-   | Parameter | Value |
-   | :-- | :-- |
-   | Title: | `Send to Arduino SlotCar`
-   | Command: | `C:\APPZ\Avr\avrdude.exe`
-   | Arguments: | `-p m328pb -c arduino -b 57600 -U flash:w:$(TargetName).hex:i -P COM4`
-   | Initial directory: | `$(TargetDir)`
-   | Use Output window: | checked
-
-   ![Set external tool](../install/images/microchip_studio_config_avrdude.png)
-
-   Note that, in Windows you can find / verify the COM port by Device Manager:
-
-   ![Get COM port value](images/win_get_com_port.png)
-
-7. Connect a slotcar to USB cabel and in menu **Tools** select **Send to Arduino SlotCar** to flash the firmware.
-
-8. Start PuTTY, open serial communication with the slot car (mode 8N1, 38400 Bd) and receive sensor values.
+6. Start PuTTY, open serial communication with the slot car (mode 8N1, 38400 Bd) and receive sensor values.
 
    ![Configure PuTTY](../install/images/putty_config_serial.png)
