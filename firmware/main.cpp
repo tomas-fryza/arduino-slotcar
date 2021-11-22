@@ -69,7 +69,7 @@ int main(void)
         usb_printf("deg/s:  %3.0f %3.0f %3.0f  |  ", imu.calcGyro(imu.gx),    imu.calcGyro(imu.gy),    imu.calcGyro(imu.gz));
         usb_printf("a [g]:  %2.1f %2.1f %2.1f  |  ", imu.calcAccel(imu.ax),   imu.calcAccel(imu.ay),   imu.calcAccel(imu.az));
         usb_printf("B [uT]: %4.0f %4.0f %4.0f  |  ", imu.calcMag(imu.mx)*100, imu.calcMag(imu.my)*100, imu.calcMag(imu.mz)*100);
-        usb_printf("T [C]:  %2.1f\r\n", 25.0 + ((double) imu.temperature) / 16.0);
+        usb_printf("T [C]:  %2.1f\r\n", 25.0 + ((double) imu.temperature)/16.0);
 
         // Some speed tests:)
 /*        speed++;
