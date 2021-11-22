@@ -4,6 +4,8 @@
 
 [KiCad project](docs/hw)
 
+[Schematic](docs/arcar.pdf)
+
 ## Installations
 
 [Linux-based systems](install/README.md)
