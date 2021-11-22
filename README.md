@@ -1,10 +1,12 @@
 # Arduino controlled autonomous slotcar
 
+![foto real](foto-slotcar.jpg)
+
 [KiCad project](docs/hw)
 
 [Schematic](docs/arcar.pdf)
 
-![demo](foto-pcb-top.png)
+![PCB](foto-pcb-top.png)
 
 ## Installation
 
