@@ -2,7 +2,7 @@
 
 1. Download Atmel ATmega Series Device Support (1.7.374) from [Microchip Packs Repository](http://packs.download.atmel.com/).
 
-2. Rename Atmel Pack File (atpak) to ZIP:
+2. Rename Atmel Pack File (`*.atpak`) to ZIP:
 
    ```bash
    cp Atmel.ATmega_DFP.1.7.374.atpak Atmel.ATmega_DFP.1.7.374.zip
