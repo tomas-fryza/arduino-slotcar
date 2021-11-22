@@ -2,19 +2,19 @@
 
 1. Start Visual Studio Code and open folder with local `arduino-slotcar` repository.
 
-2. Change path to `arduino-slotcar/firmware`
+2. Change path to `arduino-slotcar/firmware`:
 
    ```bash
    cd firmware
    ```
 
-3. Compile template
+3. Compile template:
 
    ```bash
    make all
    ```
 
-   Connect slot car to USB, compile and download firmware to AVR
+   Connect slot car to USB, compile and download firmware to AVR:
 
    ```bash
    make build_and_flash
@@ -28,17 +28,17 @@
    make list
    ```
 
-4. Program your algorithm in `arduino-slotcar/firmware/main.cpp` file, compile and flash the firmware to AVR
+4. Program your algorithm in `arduino-slotcar/firmware/main.cpp` file, compile and flash the firmware to AVR.
 
 ## Notes to `main.cpp` code
 
-Default motor speed is set to 75%
+Default motor speed is set to 75%:
 
 ```c
 motor.forward(75);
 ```
 
-All LEDs are turn on
+All LEDs are turn on:
 
 ```c
 led.forward_left(true);
@@ -47,7 +47,7 @@ led.reverse_left(true);
 led.reverse_right(true);
 ```
 
-Sensor values are read by
+Sensor values are read by:
 
 ```c
 imu.readTemp();
