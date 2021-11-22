@@ -21,7 +21,7 @@ extern "C" {
 #define putc(x) {usb_putc(x); bluetooth_putc(x);}
 
 // ========================================================
-void printf(char str[], ...);
+void usb_printf(const char str[], ...);
 // ========================================================
 
 #ifdef __cplusplus

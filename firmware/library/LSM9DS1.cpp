@@ -140,12 +140,12 @@ uint16_t LSM9DS1::begin()
     // each device. Store those in a variable so we can return them.
     uint8_t mTest = mReadByte(WHO_AM_I_M);      // Read the gyro WHO_AM_I
     uint8_t xgTest = xgReadByte(WHO_AM_I_XG);   // Read the accel/mag WHO_AM_I
-    printf("%x, %x, %x, %x\n\r", mTest, xgTest, _xgAddress, _mAddress);
+    usb_printf("%x, %x, %x, %x\r\n", mTest, xgTest, _xgAddress, _mAddress);
     uint16_t whoAmICombined = (xgTest << 8) | mTest;
 
     if (whoAmICombined != ((WHO_AM_I_AG_RSP << 8) | WHO_AM_I_M_RSP))
     {
-        printf("Init problem\n");
+        usb_puts("Init problem\r\n");
         return 0;
     }
 
@@ -307,25 +307,25 @@ void LSM9DS1::initAccel()
 // is good practice.
 void LSM9DS1::calibrate(bool autoCalc)
 {
-    uint8_t data[6] = {0, 0, 0, 0, 0, 0};
+//    uint8_t data[6] = {0, 0, 0, 0, 0, 0};
     uint8_t samples = 0;
     int ii;
     int32_t aBiasRawTemp[3] = {0, 0, 0};
     int32_t gBiasRawTemp[3] = {0, 0, 0};
 
-    printf("Start calibrate\n");
+    usb_puts("Start calibrate\r\n");
 
     // Turn on FIFO and set threshold to 32 samples
     enableFIFO(true);
-    printf("enableFIFO\n");
+    usb_puts("enableFIFO\r\n");
 
     setFIFO(FIFO_THS, 0x1F);
-    printf("setFIFO\n");
+    usb_puts("setFIFO\r\n");
     while (samples < 0x1F)
     {
         samples = (xgReadByte(FIFO_SRC) & 0x3F); // Read number of stored samples
     }
-    printf("End while\n");
+    usb_puts("End while\r\n");
     for(ii = 0; ii < samples ; ii++)
     {   // Read the gyro data stored in the FIFO
         readGyro();
@@ -350,7 +350,7 @@ void LSM9DS1::calibrate(bool autoCalc)
 
     if (autoCalc) _autoCalc = true;
 
-    printf("End calibrate\n");
+    usb_puts("End calibrate\r\n");
 }
 
 void LSM9DS1::calibrateMag(bool loadIn)

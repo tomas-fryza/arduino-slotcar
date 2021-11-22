@@ -1,3 +1,4 @@
+
 #include "wyk_stdio.h"
 
 char nible2hex(uint8_t nible)
@@ -109,7 +110,7 @@ void print_double(double cislo, char znaminko, char nula, int mista_pred_carkou,
 }
 
 // printf funkce
-void printf(char str[], ...)
+void usb_printf(const char str[], ...)
 {
     uint8_t i, j;
     char *str_p;
