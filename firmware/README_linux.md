@@ -2,7 +2,7 @@
 
 1. Start Visual Studio Code and open folder with local `arduino-slotcar` repository.
 
-2. Change path to `arduino-slotcar/firmware`:
+2. In menu **Terminal**, open **New Terminal Ctrl+Shift+;**, and change path to `arduino-slotcar/firmware`:
 
    ```bash
    cd firmware
