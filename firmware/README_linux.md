@@ -23,6 +23,7 @@
    Other useful commands:
 
    ```bash
+   make flash
    make clean
    make size
    make list
