@@ -14,35 +14,45 @@
    sudo unzip Atmel.ATmega_DFP.1.7.374.zip -d /opt/Atmel.ATmega_DFP.1.7.374
    ```
 
-4. Download AVR toolchain and extract it to `/opt/` folder
+4. Install the following packages
 
-5. Clone repo
+   ```shell
+   sudo apt-get install git make avrdude putty
+   ```
+
+5. Download the latest toolchain AVR 8-bit Toolchain - Linux 64-bit from [Microchip webpage](https://www.microchip.com/en-us/development-tools-tools-and-software/gcc-compilers-avr-and-arm) and extract all files to `/opt/` folder
+
+   ```shell
+   sudo tar -xzvf avr8-gnu-toolchain-3.6.2.1778-linux.any.x86_64.tar.gz -C /opt/
+   ```
+
+6. Clone this repo
 
    ```shell
    git clone https://github.com/tomas-fryza/arduino-slotcar
    ```
 
-6. Change path to `arduino-slotcar/install` and run avrdude script
+7. Change path to `arduino-slotcar/install` and run avrdude script
 
    ```shell
    cd arduino-slotcar/install
    sh ./copy-avrduderc-to-home.sh
    ```
 
-7. Change path to `arduino-slotcar/firmware`
+8. Change path to `arduino-slotcar/firmware`
 
    ```shell
    cd ../firmware
    ```
 
-8. Change/verify Toolchain and DFP paths in Makefile
+9. Change / verify Toolchain and DFP paths in Makefile
 
-   ```shell
+   ```Makefile
    PREFIX = /opt/avr8-gnu-toolchain-linux_x86_64
-   DFP = /opt/Atmel.ATmega_DFP.1.7.374
+   DFP    = /opt/Atmel.ATmega_DFP.1.7.374
    ```
 
-9. Connect slot car to USB, compile and download firmware to AVR
+10. Connect slot car to USB, compile and download firmware to AVR
 
    ```shell
    make build_and_flash
