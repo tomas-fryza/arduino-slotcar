@@ -6,7 +6,7 @@
 
 [Schematic](docs/arcar.pdf)
 
-## Installations
+## Installation
 
 [Linux-based systems](install/README.md)
 
