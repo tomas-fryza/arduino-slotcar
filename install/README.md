@@ -1,8 +1,8 @@
 # HOWTO install slotcar tools for Windows
 
-1. Download and install [Microchip Stuio](https://www.microchip.com/en-us/development-tools-tools-and-software/microchip-studio-for-avr-and-sam-devices)
+1. Download and install [Microchip Stuio](https://www.microchip.com/en-us/development-tools-tools-and-software/microchip-studio-for-avr-and-sam-devices).
 
-2. Download and install [git version control](https://git-scm.com/)
+2. Download and install [git version control](https://git-scm.com/).
 
 3. Download latest [avrdude](http://savannah.nongnu.org/projects/avrdude) programmer and extract archive `avrdude-6.3-mingw32.zip` to `C:\APPZ\Avr\`
 
