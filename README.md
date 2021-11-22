@@ -2,7 +2,7 @@
 
 The repository contains AVR lab project for bachelor course [*Digital Electronics 2*](https://www.vut.cz/en/students/courses/detail/242365) at Brno University of Technology, Czechia.
 
-![foto real](foto-slotcar.jpg)
+![foto real](images/foto-slotcar.jpg)
 
 ## Hardware
 
@@ -10,7 +10,7 @@ The repository contains AVR lab project for bachelor course [*Digital Electronic
 
 [KiCad project](docs/hw)
 
-![PCB](foto-pcb-top.png)
+![PCB](images/foto-pcb-top.png)
 
 ## Installation
 
@@ -37,4 +37,4 @@ The repository contains AVR lab project for bachelor course [*Digital Electronic
 
 configuration [Serial-Bluetooth](https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal&hl=cs)  
 
-![demo](serial-bluetooth.png)
+![demo](images/serial-bluetooth.png)
