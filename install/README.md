@@ -1,59 +1,63 @@
-# HOWTO use slotcar template in Ubuntu-based Linux
+# HOWTO install slotcar tools for Windows
 
-1. Download Atmel ATmega Series Device Support (1.7.374) from [Microchip Packs Repository](http://packs.download.atmel.com/)
+1. Download and install [Microchip Stuio](https://www.microchip.com/en-us/development-tools-tools-and-software/microchip-studio-for-avr-and-sam-devices)
 
-2. Rename Atmel Pack File (atpak) to ZIP:
+2. Download and install [git version control](https://git-scm.com/)
+
+3. Download latest [avrdude](http://savannah.nongnu.org/projects/avrdude) programmer and extract archive `avrdude-6.3-mingw32.zip` to `C:\APPZ\Avr\`
+
+4. Add the following lines to your `avrdude.conf` file:
+
 
    ```bash
-   cp Atmel.ATmega_DFP.1.7.374.atpak Atmel.ATmega_DFP.1.7.374.zip
+   #------------------------------------------------------------
+   # ATmega328PB
+   #------------------------------------------------------------
+
+   part parent "m328"
+       id                  = "m328pb";
+       desc                = "ATmega328PB";
+       signature           = 0x1e 0x95 0x16;
+
+       ocdrev              = 1;
+        
+       memory "efuse"
+                size = 1;
+                min_write_delay = 4500;
+                max_write_delay = 4500;
+                read = "0 1 0 1 0 0 0 0 0 0 0 0 1 0 0 0",
+                           "x x x x x x x x o o o o o o o o";
+
+                write = "1 0 1 0 1 1 0 0 1 0 1 0 0 1 0 0",
+                                "x x x x x x x x x x x x i i i i";
+       ;
+        
+   ;
    ```
 
-3. Extract zip file to `/opt/` folder
+5. Run Git Bash, create a home folder for local repository, and clone this repo
 
    ```bash
-   sudo unzip Atmel.ATmega_DFP.1.7.374.zip -d /opt/Atmel.ATmega_DFP.1.7.374
-   ```
-
-4. Install the following packages
-
-   ```bash
-   sudo apt-get install git make avrdude putty
-   ```
-
-5. Download the latest toolchain AVR 8-bit Toolchain - Linux 64-bit from [Microchip webpage](https://www.microchip.com/en-us/development-tools-tools-and-software/gcc-compilers-avr-and-arm) and extract all files to `/opt/` folder
-
-   ```bash
-   sudo tar -xzvf avr8-gnu-toolchain-3.6.2.1778-linux.any.x86_64.tar.gz -C /opt/
-   ```
-
-6. Clone this repo
-
-   ```bash
+   cd d:/Documents/
+   mkdir GIT
+   cd GIT
    git clone https://github.com/tomas-fryza/arduino-slotcar
    ```
 
-7. Change path to `arduino-slotcar/install` and run avrdude script
+6. Run Microchip Studio and in menu **Tools** create a new **External Tools...** as follows (use your path to `avrdude.exe` and specify your COM port):
 
-   ```bash
-   cd arduino-slotcar/install
-   sh ./copy-avrduderc-to-home.sh
-   ```
+   | Parameter | Value |
+   | :-- | :-- |
+   | Title: | `Send to Arduino SlotCar`
+   | Command: | `C:\APPZ\Avr\avrdude.exe`
+   | Arguments: | `-p m328pb -c arduino -b 57600 -U flash:w:$(TargetName).hex:i -P COM4`
+   | Initial directory: | `$(TargetDir)`
+   | Use Output window: | checked
 
-8. Change path to `arduino-slotcar/firmware`
+   ![Set external tool](../install/images/microchip_studio_config_avrdude.png)
 
-   ```bash
-   cd ../firmware
-   ```
+   Note that, in Windows you can find / verify the COM port by Device Manager:
 
-9. Change / verify Toolchain and DFP paths in `Makefile`
+   ![Get COM port value](images/win_get_com_port.png)
 
-   ```Makefile
-   PREFIX = /opt/avr8-gnu-toolchain-linux_x86_64
-   DFP    = /opt/Atmel.ATmega_DFP.1.7.374
-   ```
-
-10. Connect slot car to USB, compile and download firmware to AVR
-
-    ```bash
-    make build_and_flash
-    ```
+7. Usage of slotcar template can be found [here](../firmware/README.md).
