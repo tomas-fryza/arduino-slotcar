@@ -7,7 +7,7 @@
  */
 
 #ifndef WYK_USB_H_INCLUDED
-#define WYK_USB_H_INCLUDED
+# define WYK_USB_H_INCLUDED
 
 #ifdef __cplusplus
 extern "C" {
