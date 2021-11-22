@@ -1,4 +1,4 @@
-# Arduino controlled autonomous slotcar
+# Arduino controlled autonomous slot car
 
 ![foto real](foto-slotcar.jpg)
 
