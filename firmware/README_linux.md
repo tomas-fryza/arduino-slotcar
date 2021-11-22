@@ -32,7 +32,7 @@
 
 ## Notes to `main.cpp` code
 
-Default speed is set to 75%
+Default motor speed is set to 75%
 
 ```c
 motor.forward(75);
@@ -56,7 +56,7 @@ imu.readGyro();
 imu.readAccel();
 ```
 
-Measured values are sent to UART terminal in 8N1 mode and 38400 Bd. You can view them by `make miniterm` or any terminal such as PuTTY.
+Measured values are sent to UART terminal in 8N1 mode and 38400 Bd. You can view them by any terminal such as PuTTY.
 
 ```c
 printf("deg/s: %3.0f %3.0f %3.0f  |  ", imu.calcGyro(imu.gx), imu.calcGyro(imu.gy), imu.calcGyro(imu.gz));
