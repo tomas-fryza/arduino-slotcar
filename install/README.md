@@ -45,7 +45,7 @@
    cd ../firmware
    ```
 
-9. Change / verify Toolchain and DFP paths in Makefile
+9. Change / verify Toolchain and DFP paths in `Makefile`
 
    ```Makefile
    PREFIX = /opt/avr8-gnu-toolchain-linux_x86_64
