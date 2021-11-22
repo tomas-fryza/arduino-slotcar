@@ -9,6 +9,7 @@
 TARGET = DEMO
 # chip
 CHIP = atmega328pb
+MCU_DUDE = m328pb
 # usb to uart
 USB_TO_UART = CP2102
 # baudrate
@@ -155,8 +156,8 @@ $(BUILD_DIR)/EEPROM.hex: $(BUILD_DIR)/$(TARGET).elf
 #	@$(OBJDUMP) -h -S $< > $@
 
 # create build directory
-$(BUILD_DIR):
-	@echo "Create directory: \t$@"
+$(BUILD_DIR) :
+	@echo "Create build directory"
 	@mkdir $@
 
 ## Rule for extended listing file
@@ -185,9 +186,9 @@ dump_eeprom:
 
 #flash:
 #	$(AVRDUDE) -U flash:w:$(BUILD_DIR)/$(TARGET).elf:e
-flash :
+flash : $(BUILD_DIR)/$(TARGET).hex
 	@echo "Flashing program memory\t$<"
-	$(AVRDUDE) -p $(MCU_DUDE) -c arduino -D -V -u -q -U flash:w:$(BUILD_DIR)/$(TARGET).hex:i -P $(USBPORT)
+	$(AVRDUDE) -p $(MCU_DUDE) -c arduino -b 57600 -D -V -u -U flash:w:$(BUILD_DIR)/$(TARGET).hex:i -P $(USBPORT)
 
 ###### TODO
 flash_all :
@@ -205,5 +206,5 @@ build_and_flash: all flash
 
 ## Clean rule
 clean :
-	@echo "Cleaning project files"
+	@echo "Clean build directory"
 	@$(RM) $(BUILD_DIR)
