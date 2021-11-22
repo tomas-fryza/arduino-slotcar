@@ -35,7 +35,7 @@
    ;
    ```
 
-5. Run Git Bash, create a home folder for local repository, and clone this repo
+5. Run Git Bash, create a home folder for local repository, and clone this repo:
 
    ```bash
    cd d:/Documents/
