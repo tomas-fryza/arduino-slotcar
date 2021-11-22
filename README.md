@@ -1,10 +1,12 @@
 # Arduino controlled autonomous slot car
 
-![foto real](foto-slotcar.jpg)
+The repository contains AVR lab project for bachelor course [*Digital Electronics 2*](https://www.vut.cz/en/students/courses/detail/242365) at Brno University of Technology, Czechia.
 
 [KiCad project](docs/hw)
 
 [Schematic](docs/arcar.pdf)
+
+![foto real](foto-slotcar.jpg)
 
 ![PCB](foto-pcb-top.png)
 
