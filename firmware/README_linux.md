@@ -4,25 +4,25 @@
 
 2. Change path to `arduino-slotcar/firmware`
 
-   ```shell
+   ```bash
    cd firmware
    ```
 
 3. Compile template
 
-   ```shell
+   ```bash
    make all
    ```
 
    Connect slot car to USB, compile and download firmware to AVR
 
-   ```shell
+   ```bash
    make build_and_flash
    ```
 
    Other useful commands:
 
-   ```shell
+   ```bash
    make clean
    make size
    make list
