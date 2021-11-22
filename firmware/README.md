@@ -52,7 +52,7 @@
    | Initial directory: | `$(TargetDir)`
    | Use Output window: | checked
 
-   ![Set external tool](../../install/images/microchip_studio_config_avrdude.png)
+   ![Set external tool](../install/images/microchip_studio_config_avrdude.png)
 
    Note that, in Windows you can find / verify the COM port by Device Manager:
 
