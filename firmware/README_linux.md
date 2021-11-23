@@ -1,4 +1,4 @@
-# HOWTO use slot car template in Ubuntu-based Linux
+# How to use slot car template in Ubuntu-based Linux
 
 1. Start Visual Studio Code and open folder with local `arduino-slotcar` repository.
 
