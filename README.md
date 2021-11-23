@@ -12,15 +12,15 @@ The repository contains AVR lab project for bachelor course [*Digital Electronic
 
 ![PCB](images/foto-pcb-top.png)
 
-## Software nstallation
+## Software installation
 
-[Linux-based systems](install/README_linux.md)
+[Ubuntu-based Linux distributions](install/README_linux.md)
 
 [Windows](install/README.md)
 
 ## Usage
 
-[Linux-based systems](firmware/README_linux.md)
+[Ubuntu-based Linux distributions](firmware/README_linux.md)
 
 [Microchip Studio](firmware/README.md)
 
