@@ -1,4 +1,4 @@
-# HOWTO install slot car tools in Ubuntu-based Linux
+# How to install slot car tools in Ubuntu-based Linux
 
 1. Download Atmel ATmega Series Device Support (1.7.374) from [Microchip Packs Repository](http://packs.download.atmel.com/).
 
