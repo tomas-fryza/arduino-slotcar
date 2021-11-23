@@ -12,7 +12,7 @@ The repository contains AVR lab project for bachelor course [*Digital Electronic
 
 ![PCB](images/foto-pcb-top.png)
 
-## Installation
+## Software nstallation
 
 [Linux-based systems](install/README_linux.md)
 
