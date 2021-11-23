@@ -56,7 +56,7 @@
 
    ![Set external tool](images/microchip_studio_config_avrdude.png)
 
-   Note that, in Windows you can find / verify the COM port by Device Manager:
+   Note that, in Windows you can find and/or verify the COM port by Device Manager:
 
    ![Get COM port value](images/win_get_com_port.png)
 
