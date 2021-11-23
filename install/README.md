@@ -1,4 +1,4 @@
-# HOWTO install slot car tools for Windows
+# How to install slot car tools for Windows
 
 1. Download and install [Microchip Stuio](https://www.microchip.com/en-us/development-tools-tools-and-software/microchip-studio-for-avr-and-sam-devices).
 
