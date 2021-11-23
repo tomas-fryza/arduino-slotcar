@@ -1,4 +1,4 @@
-# HOWTO use slot car template in Microchip Studio
+# How to use slot car template in Microchip Studio
 
 1. Start Microchip Studio and create a new `GCC C++ Exacutable Project`.
 
