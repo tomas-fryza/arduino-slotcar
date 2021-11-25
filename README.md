@@ -6,7 +6,7 @@ The repository contains AVR lab project for bachelor course [*Digital Electronic
 
 ## Hardware
 
-[Schematic](docs/arcar.pdf)
+[Schematics](docs/arcar.pdf)
 
 [KiCad project](docs/hw)
 
