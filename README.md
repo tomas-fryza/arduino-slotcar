@@ -14,15 +14,15 @@ The repository contains AVR lab project for bachelor course [*Digital Electronic
 
 ## Software installation
 
-[Ubuntu-based Linux distributions](install/README_linux.md)
-
 [Windows](install/README.md)
+
+[Ubuntu-based Linux distributions](install/README_linux.md)
 
 ## Usage
 
-[Ubuntu-based Linux distributions](firmware/README_linux.md)
-
 [Microchip Studio](firmware/README.md)
+
+[Ubuntu-based Linux distributions](firmware/README_linux.md)
 
 ## TODO: Bluetooth GATT
 
