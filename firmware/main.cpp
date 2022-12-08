@@ -17,7 +17,7 @@
 
 #include "wyk_stdio.h"
 
-volatile uint8_t speed = 75;
+volatile uint8_t speed = 85;
 
 /* Function definitions ----------------------------------------------*/
 /**********************************************************************
@@ -43,12 +43,13 @@ int main(void)
 
     // Timer1: presc=64, overflow enable, OVF=1/16M * 2^16 * 64 = 262 msec
     TCCR1B |= (1<<CS11) | (1<<CS10);
-    TIMSK1 |= (1<<0);
+    // TIMSK1 |= (1<<0);
 
-    sei();
+    // sei();
 
     // Set default speed
     motor.forward(speed);
+    usb_printf("speed: %d\r\n", speed);
 
     // Turn on all LEDs
 //    led.forward_left(true);
@@ -67,19 +68,20 @@ int main(void)
     // Infinite loop
     while (1)
     {
-        motor.forward(speed);
+        // motor.forward(speed);
 
         // Read values from sensors
-        imu.readTemp();
-        imu.readMag();
+        // imu.readTemp();
+        // imu.readMag();
         imu.readGyro();
         imu.readAccel();
 
         // Just for testing. Use any terminal, such as PuTTY in 8N1 mode, 38400 Bd
         usb_printf("deg/s:  %3.0f %3.0f %3.0f  |  ", imu.calcGyro(imu.gx),    imu.calcGyro(imu.gy),    imu.calcGyro(imu.gz));
-        usb_printf("a [g]:  %2.1f %2.1f %2.1f  |  ", imu.calcAccel(imu.ax),   imu.calcAccel(imu.ay),   imu.calcAccel(imu.az));
-        usb_printf("B [uT]: %4.0f %4.0f %4.0f  |  ", imu.calcMag(imu.mx)*100, imu.calcMag(imu.my)*100, imu.calcMag(imu.mz)*100);
-        usb_printf("T [C]:  %2.1f\r\n", 25.0 + ((double) imu.temperature)/16.0);
+        usb_printf("a [g]:  %2.1f %2.1f %2.1f  |  \r\n", imu.calcAccel(imu.ax),   imu.calcAccel(imu.ay),   imu.calcAccel(imu.az));
+        // usb_printf("B [uT]: %4.0f %4.0f %4.0f  |  ", imu.calcMag(imu.mx)*100, imu.calcMag(imu.my)*100, imu.calcMag(imu.mz)*100);
+        // usb_printf("T [C]:  %2.1f\r\n", 25.0 + ((double) imu.temperature)/16.0);
+
 
         // Some speed tests:)
 /*        speed++;
@@ -146,11 +148,11 @@ ISR(TIMER1_OVF_vect)
         usb_printf("OFF\r\n");
     }
 
-    speed++;
-    if (speed>=90)
-        speed = 75;
+    // speed++;
+    // if (speed>=90)
+    //     speed = 75;
     // Just for testing. Use any terminal, such as PuTTY in 8N1 mode, 38400 Bd
-    usb_printf("speed: %d\r\n", speed);
+    // usb_printf("speed: %d\r\n", speed);
 }
 
 /**********************************************************************
