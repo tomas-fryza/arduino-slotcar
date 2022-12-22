@@ -17,7 +17,7 @@
 
 #include "wyk_stdio.h"
 
-volatile uint8_t speed = 85;
+volatile uint8_t speed = 80;
 
 /* Function definitions ----------------------------------------------*/
 /**********************************************************************
