@@ -48,7 +48,7 @@ int main(void)
     // sei();
 
     // Set default speed
-    motor.forward(speed);
+    motor.reverse(speed);
     usb_printf("speed: %d\r\n", speed);
 
     // Turn on all LEDs
